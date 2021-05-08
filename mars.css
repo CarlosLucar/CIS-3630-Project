@@ -1,0 +1,319 @@
+body{
+    background-color: black;
+}
+
+nav a{
+    padding-right: 10em;
+}
+
+header{
+    font-family: 'Zen Dots', cursive;
+    text-align: center;
+}
+
+header h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+}
+
+form{
+    color: white;
+}
+
+.shuttle{
+    display: block;
+    margin: 3em;
+}
+
+.background{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    width: 50%;
+    max-width: 960px;
+    text-align: center;
+
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.banner-text{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    text-transform: uppercase;
+}
+
+.content{
+    position: relative;
+    top: 0%;
+    margin: 0;
+    width: 100%;
+    opacity: 1;
+    text-align:left;
+    font-size: 1.5em;
+    max-width: 450px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.content-text{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-transform: uppercase;
+}
+
+.stats{
+    color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    margin: 50px;
+}
+
+.stats h2{
+    font-size: 10em;
+}
+#navbarDarkDropdownMenuLink{
+    color: #fff;
+}
+
+.reveal {
+    position: absolute;
+    top: 115%;
+    transform: translate(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translate(0px);
+    opacity: 1;
+
+}
+
+table{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    right: 1%;
+}
+
+tr{
+    border-bottom: solid 1px #fff ;
+}
+
+
+.td1{
+    width: auto;
+    padding-right: 300px;
+}
+
+td{
+    padding: 25px;
+}
+
+hr{
+    color: #fff;
+}
+
+.t1{
+    position: absolute;
+    top: 40%;
+}
+
+.videoplayer{
+    position: relative;
+    width: 100%;
+    min-width: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoplayer .content{
+    max-width: 550px;
+}
+
+.videoplayer .content a{
+    position: absolute;
+    top: -1250px;
+    left: 40%;
+}
+
+/*.videoplayer .content a{
+    position: relative;
+    text-transform: uppercase;
+    background: #fff;
+    color: #111;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+}*/
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgb(0,0,0,0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    position: relative;
+    max-width: 900px;
+    outline: none;
+
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;    
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+@media(max-width:991px){
+    .trailer video{
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+.play-btn {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    margin: 100px auto;
+    box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+    cursor: pointer;
+  }
+  
+  /* triangle */
+  .play-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-40%) translateY(-50%);
+    transform: translateX(-40%) translateY(-50%);
+    transform-origin: center center;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #fff;
+    z-index: 100;
+    -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  /* pulse wave */
+  .play-btn:before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation: pulsate1 2s;
+    animation: pulsate1 2s;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, .75);
+    top: -30%;
+    left: -30%;
+    background: rgba(198, 16, 0, 0);
+  }
+  
+  @-webkit-keyframes pulsate1 {
+    0% {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      opacity: 1;
+      box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0;
+      box-shadow: none;
+  
+    }
+  }
+  
+  @keyframes pulsate1 {
+    0% {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      opacity: 1;
+      box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+    }
+    100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1);
+      opacity: 0;
+      box-shadow: none;
+  
+    }
+  }
