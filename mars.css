@@ -7,7 +7,7 @@ nav a{
 }
 
 header{
-    font-family: 'Zen Dots', cursive;
+    font-family: 'Major Mono Display', monospace;
     text-align: center;
 }
 
@@ -68,7 +68,7 @@ form{
 .banner-text{
     position: absolute;
     top: 60%;
-    left: 10%;
+    left: 15%;
     text-transform: uppercase;
 }
 
@@ -86,20 +86,23 @@ form{
 }
 
 .content-text{
-    position: absolute;
-    top: 10%;
+    position: relative;
+    top: 0;
     left: 10%;
     text-transform: uppercase;
 }
 
 .stats{
     color: #fff;
-    position: absolute;
-    top: 100%;
+    position: relative;
+    top: 0;
     right: 5%;
     margin: 50px;
 }
 
+.stats-text{
+    position: relative;
+    top: -200px;}
 .stats h2{
     font-size: 10em;
 }
@@ -316,4 +319,32 @@ hr{
       box-shadow: none;
   
     }
+  }
+
+
+  .carousel-inner h5{
+      color: #fff;
+      border: 1px #000 solid;
+      padding: 5px 5px;
+      margin: 5px 5px;
+      background-color: #000 ;
+  }
+  
+  .section{
+      position: relative;
+      top: 200px;
+  }
+  .section img{
+      position: relative;
+      left: 5%;
+      height: 400px;
+  }
+
+  .section-text{
+     color: #fff;
+     max-width: 500px; 
+     position: relative;
+     left: 60%;
+     top: -300px;
+     font-size: 1.3em;
   }

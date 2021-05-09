@@ -11,15 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="mars.css">
-    <title>Mars One: Home</title>
+    <title>Mars One: Space Travel</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"> <img src="images/default.png" alt="logo"  width="30" height="24"></a>
         <a class="navbar-brand" href="shuttle.html">Space Shuttle</a>
-        <a class="navbar-brand" href="marsInfo.html">Mars Info</a>
+        <a class="navbar-brand" href="marsInfo.html">Mars</a>
         <a class="navbar-brand" href="travel.html">Space Travel</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,13 +49,70 @@
     </nav>
 
 <main>
-    <header>
-        <h1> Mars One</h1>
-    </header>
+      <header>
+        <div class="banner">     
+          <div class="banner-text" style="background-color: transparent; position: absolute; top: -270px; left: 25%; text-transform: lowercase; font-size: .9em; z-index: 1;"> one small step 
+        </div>
+      </header>
 
-    <img src="images/spacetravel.jpeg" alt="background" class="background" style="height: 732px;">
-    <img src="images/earth.webp" alt="background"  class="background" style="height: 732px;">
-    <img src="images/orbit.jpeg" alt="background"  class="background" style="height: 732px;">
+  
+    <img src="images/earth.webp" alt="background"  class="background" style="height: 732px; transform: scaleX(-1);" >
+    
+    <div  class="section" style="height: 732px;">
+
+      <img src="images/rocket.gif" style="position: relative; top: 20%;">
+    
+    </div>
+
+    <div class="section-text reveal"> 
+
+      <p>SpaceX’s Starship spacecraft and Super Heavy rocket (collectively referred to as Starship) represent a fully reusable transportation system designed to carry
+         both crew and cargo to Earth orbit, the Moon, Mars and beyond. Starship will be the world’s most powerful launch vehicle ever developed, with the ability to 
+         carry in excess of 100 metric tonnes to Earth orbit.</p>
+    </div>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/orbit.jpeg" class="d-block w-100" alt="rocket in orbit" style="height: 732px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Rendering of Starship orbiting Earth</h5>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/shiporbit.jpg" class="d-block w-100" alt="orbiting" style="height: 732px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Rendering of Starship seperating from fuel source</h5>
+  
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/spacex.jpg" class="d-block w-100" alt="ship in orbit" style="height: 732px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Rendering of Dragon Spacecraft leaving Earth atmosphere</h5>
+           
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
 
 
     </main>
@@ -56,7 +120,7 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
@@ -66,5 +130,37 @@
     <footer>
         Copyright &copy; 2021 Mars One <br> Carlos Lucar 
     </footer>
+
+    <script>
+
+      $(window).scroll(function(){
+        $(".banner-text").css("opacity",1 - $(window).scrollTop() / 250);
+      });
+
+    </script>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+    
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+    
+        for(var i = 0; i < reveals.length; i++){
+    
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+    
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
+
+
   </body>
 </html>
