@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="mars.css">
+    <title>Mars One: Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="images/default.png" alt="logo"  width="30" height="24"></a>
+        <a class="navbar-brand" href="shuttle.html">Space Shuttle</a>
+        <a class="navbar-brand" href="marsInfo.html">Mars</a>
+        <a class="navbar-brand" href="travel.html">Space Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Check Elegibility 
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<main>
+    <header>
+        <h1> THANK YOU </h1>
+    </header>
+
+      <br><br>
+      <div class="form-results" style="color: #fff;">
+        <h2 style="padding-right: 30px; display: inline;">Your Name: </h2>
+        <h2 id="result-fname" style="display: inline;"></h2>
+        <h2 id="result-lname" style="display: inline;"></h2>
+      </div>
+
+      <div class="form-results" style="color: #fff;">
+        <h2 style="padding-right: 30px; display: inline;">Email: </h2>
+        <h2 id="result-email" style="display: inline;"></h2>
+      </div>
+
+
+      <div class="form-results" style="color: #fff;">
+        <h2 style="padding-right: 30px; display: inline;">City: </h2>
+        <h2 id="result-city" style="display: inline;"></h2>
+      </div>
+
+      <div class="form-results" style="color: #fff;">
+        <h2 style="padding-right: 30px; display: inline;">State: </h2>
+        <h2 id="result-state" style="display: inline;"></h2>
+      </div>
+
+      <div class="form-results" style="color: #fff;">
+        <h2 style="padding-right: 30px; display: inline;">Zip Code: </h2>
+        <h2 id="result-zip" style="display: inline;"></h2>
+      </div>
+
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <hr>
+    <footer>
+        Copyright &copy; 2021 Mars One <br> Carlos Lucar 
+    </footer>
+
+    <script>
+
+      window.addEventListener('load', () => {
+        const params = (new URL(document.location)).searchParams;
+        const fname = params.get('fname');
+        const lname = params.get('lname');
+        const email = params.get('email');
+        const city = params.get('city');
+        const state = params.get('state');
+        const zip = params.get('zip');
+
+        document.getElementById('result-fname').innerHTML = fname;
+        document.getElementById('result-lname').innerHTML = lname;
+        document.getElementById('result-email').innerHTML = email;
+        document.getElementById('result-city').innerHTML = city;
+        document.getElementById('result-state').innerHTML = state;
+        document.getElementById('result-zip').innerHTML = zip;
+      })
+
+    </script>
+
+
+  </body>
+</html>
