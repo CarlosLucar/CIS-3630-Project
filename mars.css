@@ -1,9 +1,15 @@
 body{
     background-color: black;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
 }
 
-nav a{
-    padding-right: 10em;
+
+.nav-link, .navbar-brand{
+    padding-right: 14vmax;
+    display: inline;
 }
 
 header{
@@ -95,14 +101,19 @@ form{
 
 .stats{
     color: #fff;
-    position: relative;
-    right: 5%;
-    margin: 50px;
+    position: absolute;
+    right: 10%;
+    padding: 0;
+    margin: 0;
+    
 }
 
-.stats-text{
+#gif{
     position: relative;
-    top: 0;}
+    top: 20%;
+}
+
+
 .stats h2{
     font-size: 10em;
 }
@@ -349,13 +360,201 @@ hr{
      font-size: 1.3em;
   }
 
+  @media only screen and (max-width: 1320px){
 
-  @media only screen and (max-width: 600px){
+    .section-text{
+        position: relative;
+        top: -600px;
+        left: 30vmax;
+        padding: 0;
+        margin: 0;
+    }
+
+    #gif{
+        position: relative;
+        top: 250px;
+        left: 20vmax;
+    }
   }
+
+
+  @media only screen and (max-width: 1270px){
+    .nav-link, .navbar-brand{
+        padding-right: 10vmax;
+        display: inline;
+    }
+    .stats{
+        color: #fff;
+        position: absolute;
+        right: 5%;
+        padding: 0;
+        margin: 0;
+        font-size: .5em;
+    }
+    .stats-text{
+        position: relative;
+        top: 150px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        text-align:left;
+        font-size: .9em;
+        max-width: 350px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .content-text{
+        position: absolute;
+        top: 250px;
+        left: 10%;
+        text-transform: uppercase;
+    }
+  }
+
+
+  @media only screen and (max-width: 991px){
+      .banner-text{
+          position: relative;
+          left: 0;
+      }
+
+      .section-text{
+        position: relative;
+        top: -600px;
+        left: 20vmax;
+        padding: 0;
+        margin: 0;
+    }
+
+    #gif{
+        position: relative;
+        top: 250px;
+        left: 10vmax;
+        width: 600px;
+    }
+  }
+
+  @media only screen and (max-width: 700px){
+    .section-text{
+        position: relative;
+        top: -700px;
+        left: 15vmax;
+        padding: 0;
+        margin: 0;
+        max-width: 300px;
+    }
+
+    #gif{
+        position: relative;
+        top: 300px;
+        left: 5vmax;
+        width: 400px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-results h2{
+        position: relative;
+        left: 20%;
+        padding: 0;
+        margin: 0;
+        font-size: 3vh ;
+      }
+
+  }
+
+  @media only screen and (max-width: 425px){
+    .stats{
+        color: #fff;
+        position: absolute;
+        right: .5%;
+        padding: 0;
+        margin: 0;
+    }
+    .stats-text{
+        position: relative;
+        top: 150px;
+        margin: 0;
+        padding: 0;
+        display:flex;
+        font-size: .2em ;
+    }
+
+    .stats .count{
+        font-size: 28em;
+        position: relative;
+        top: 100px;
+        left: 70px;
+    }
+
+    #hide{
+        display: none;
+    }
+
+    #show{
+        background-color: #000;
+        height: 732px;
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        text-align:left;
+        font-size: .9em;
+        max-width: 350px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .content-text{
+        position: absolute;
+        top: 450px;
+        left: 10%;
+        text-transform: uppercase;
+    }
+
+    .section-text{
+        position: relative;
+        top: -700px;
+        left: 10vmax;
+        padding: 0;
+        margin: 0;
+        max-width: 300px;
+    }
+
+    #gif{
+        position: relative;
+        top: 300px;
+        left: 1vmax;
+        width: 400px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-results h2{
+        display: inline;
+    }
+    #result-email{
+        position: relative;
+        justify-content: left;
+    }
+    
+  }
+
+    form{
+        max-width: 65%; position: relative; left: 18%;
+    }
 
   .form-results{
       position: relative;
-      left: 30%;
+      left: 20%;
+      padding: 0;
+      margin: 0;
     }
 
     #result-email{
@@ -376,5 +575,5 @@ hr{
 
     #result-zip{
         position: relative;
-        left: 1.7%;
+        left: 0;
     }
