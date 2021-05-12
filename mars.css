@@ -6,10 +6,32 @@ body{
     overflow-x: hidden;
 }
 
+.dropdown-menu a{
+    color: #dee2e6;
+    display: block;
+    width: 100%;
+    padding: .25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
 
 .nav-link, .navbar-brand{
     padding-right: 14vmax;
     display: inline;
+}
+
+.nav-link{
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    position: relative;
+    top: 5px;
+    color: #fff;
 }
 
 header{
@@ -113,6 +135,30 @@ form{
     top: 20%;
 }
 
+.map{
+    position: relative;
+    left: 10%;
+}
+
+.icons{
+    position: absolute;
+    display: inline-block;
+    left: 55%;
+    font-size: 2.5vmax;
+    top: 145%;
+}
+
+#quote{
+    max-width: 80vmax;
+    position: relative;
+    left: 10%;
+    text-align: center;
+}
+
+#source{
+    position: relative;
+    left: 65%;
+}
 
 .stats h2{
     font-size: 10em;
@@ -186,17 +232,6 @@ hr{
     left: 40%;
 }
 
-/*.videoplayer .content a{
-    position: relative;
-    text-transform: uppercase;
-    background: #fff;
-    color: #111;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 15px;
-}*/
 
 .trailer{
     position: fixed;
@@ -440,6 +475,62 @@ hr{
   }
 
   @media only screen and (max-width: 700px){
+    .stats{
+        color: #fff;
+        position: absolute;
+        right: .5%;
+        padding: 0;
+        margin: 0;
+    }
+    .stats-text{
+        position: relative;
+        top: 150px;
+        margin: 0;
+        padding: 0;
+        display:flex;
+        font-size: .2em ;
+    }
+
+    .stats .count{
+        font-size: 28em;
+        position: relative;
+        top: 100px;
+        left: 70px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #hide{
+        display: none;
+    }
+
+    #show{
+        background-color: #000;
+        height: 732px;
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        text-align:left;
+        font-size: .9em;
+        max-width: 350px;
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .content-text{
+        position: absolute;
+        top: 450px;
+        left: 40%;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
     .section-text{
         position: relative;
         top: -700px;
@@ -550,32 +641,50 @@ hr{
         max-width: 65%; position: relative; left: 18%;
     }
 
+    .hResult{
+        display: inline;
+        position: relative;
+        justify-content: left;
+        padding-right: 20px;
+    }
+
+    
+
+
   .form-results{
       position: relative;
-      left: 20%;
+      left: 35%;
       padding: 0;
       margin: 0;
     }
 
+    #result-fname, #result-lname{
+        position: relative;
+        left: 3% ;
+    }
+
     #result-email{
         position: relative;
-        left: 5.5%;
-        justify-content: left;
+        left: 3.5%;
+        display: inline;
     }
 
     #result-city{
         position: relative;
-        left: 7%;
+        left: 5%;
+        display: inline;
     }
 
     #result-state{
         position: relative;
-        left: 5.7%;
+        left: 4%;
+        display: inline;
     }
 
     #result-zip{
         position: relative;
-        left: 0;
+        display: inline;
+        display: inline;
     }
 
 main{
@@ -595,7 +704,8 @@ main{
     }
 
 
-.transition-1{
+
+.transition-2{
     position: fixed;
     top: 0;
     left: -100%;
@@ -606,7 +716,7 @@ main{
     transition: 0.5s ease-out;
 }
 
-.transition-1.is_active{
+.transition-2.is-active{
     left: 0px;
 }
 
