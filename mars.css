@@ -449,6 +449,25 @@ hr{
         left: 10%;
         text-transform: uppercase;
     }
+
+    .aboutmain{
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #quote,#source{
+        font-size: 10px;
+    }
+
+    .icons{
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -250px;
+        left: 200px;
+    }
   }
 
 
@@ -471,6 +490,14 @@ hr{
         top: 250px;
         left: 10vmax;
         width: 600px;
+    }
+    .icons{
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -420px;
+        left: 100px;
     }
   }
 
@@ -551,11 +578,13 @@ hr{
 
     .form-results h2{
         position: relative;
-        left: 20%;
+        left: 0;
         padding: 0;
         margin: 0;
         font-size: 3vh ;
       }
+
+
 
   }
 
@@ -634,6 +663,92 @@ hr{
         position: relative;
         justify-content: left;
     }
+
+    .icons{
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -500px;
+        left: 300px;
+    }
+
+    /*.aboutmain{
+        background-color: black;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    }*/
+
+    .aboutmain{
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: -30px;
+    }
+
+    #quote,#source{
+        font-size: 10px;
+        max-width: 400px;
+    }
+
+    .aboutmain header{
+        position: relative;
+        left: 8%;
+    }
+
+    .icons{
+        font-size: 5px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -450px;
+        left: 250px;
+    }    
+    
+    .aboutmain{
+        font-size: 5px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .message{
+        max-width: 350px;
+    }
+
+    .form-results{
+        position: relative;
+        left: -200px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .form-results h2{
+          display: inline;
+          position: relative;
+          left: -140px;
+      }
+
+      #result-fname{
+       position: relative;
+       left: 0;
+       margin-left: -150px;;
+    }
+
+    #result-email{
+        margin-left: -150px;
+    }
+
+    #result-city{
+        margin-left: -140px;
+    }
+
+    #result-state{
+        margin-left: -150px;
+    }
+    
     
   }
 
